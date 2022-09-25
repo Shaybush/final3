@@ -5,10 +5,20 @@ $silver:#C0C0C0;
 $background:#F5F8FA;
 $lightBlue:#ADD8E6;
 $purple:#BF40BF;
+*{
+    scroll-behavior: smooth;
+}
+a{
+    color: $purple;
+}
+a:hover{
+    color: #980898;
+}
 body{
     background: $background;
     color: $black;
 }
+// header start
 header{
     color: $silver;
     nav{
@@ -43,25 +53,62 @@ header::after{
     width: 98%;
     margin: 0 auto;
 }
+@media(max-width:768px) {
+    header{
+        font-size: 0.8em;
+    }
+}
+// header end
 .lineBottom::after{
     content: "";
     display: block;
     margin: 0;
     border: 0.2px solid $silver;
-    width: 90%;
+    width: 99%;
     margin: 0 auto;
 }
 .purpleText{
     color: $purple;
 }
+// top text
 .topText{
     margin-top: 32px;
+    margin-bottom: 24px;
     text-align: center;
     padding: 0 auto;
 }
+@media(max-width:768px){
+    .topText{
+        h2{
+            font-size: 1em;
+        }
+        h6{
+            font-size: 0.7em;
+        }
+    }  
+}
+// top text
+
+// main
 main{
     background: $white;
     .booksSection{
         padding: 12px;
     }
+    .titleB{
+        padding: 12px;
+    }
+    table{
+        overflow: hidden;
+        overflow-x: scroll;
+        th{
+            color: $gray;
+        }
+    }
 }
+@media(max-width:768px){
+    main{
+        font-size: 0.7em;
+    }
+}
+// main

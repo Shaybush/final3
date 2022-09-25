@@ -1,3 +1,15 @@
+* {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #BF40BF;
+}
+
+a:hover {
+  color: #980898;
+}
+
 body {
   background: #F5F8FA;
   color: #333;
@@ -38,12 +50,17 @@ header::after {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  header {
+    font-size: 0.8em;
+  }
+}
 .lineBottom::after {
   content: "";
   display: block;
   margin: 0;
   border: 0.2px solid #C0C0C0;
-  width: 90%;
+  width: 99%;
   margin: 0 auto;
 }
 
@@ -53,13 +70,38 @@ header::after {
 
 .topText {
   margin-top: 32px;
+  margin-bottom: 24px;
   text-align: center;
   padding: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .topText h2 {
+    font-size: 1em;
+  }
+  .topText h6 {
+    font-size: 0.7em;
+  }
+}
 main {
   background: #fff;
 }
 main .booksSection {
   padding: 12px;
+}
+main .titleB {
+  padding: 12px;
+}
+main table {
+  overflow: hidden;
+  overflow-x: scroll;
+}
+main table th {
+  color: #808080;
+}
+
+@media (max-width: 768px) {
+  main {
+    font-size: 0.7em;
+  }
 }
