@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
 
 exports.UserModel = mongoose.model("users",userSchema);
 
-// פונקציה שמייצרת טוקן 
+
 exports.createToken = (_id,role) => {
     return jwt.sign({_id,role},config.tokenSecret,{expiresIn:"60mins"})
   }

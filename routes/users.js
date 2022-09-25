@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
 // show user info
 router.get("/myInfo", auth, async (req, res) => {
     try {
-        // req.tokenData._id -> מגיע מפונקציית האוט שנמצאת בשרשור
+        // req.tokenData._id -> comming from middleware auth
         let user = await UserModel.findOne({ _id: req.tokenData._id }, { password: 0 })
         res.json(user);
         //  res.json({msg:"all good 3333" , data:req.tokenData })
