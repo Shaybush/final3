@@ -138,7 +138,7 @@ exports.userCtrl = {
                 return res.status(400).json({ err: "cannot delete user" })
             }
             // await BookModel.deleteMany({ user_id: idDel });
-            res.json(200).json(data);
+            res.json(200).json({msg:data + "user deleted"});
         }
         catch (err) {
             console.log(err);
