@@ -42,6 +42,7 @@ exports.userCtrl = {
         try {
             let user = new UserModel(req.body);
             user.password = await bcrypt.hash(user.password, 10);
+            user.email = user.email.toLowerCase();
             await user.save();
             user.password = "*****";
             res.status(201).json(user);
@@ -60,7 +61,8 @@ exports.userCtrl = {
             return res.status(400).json(validBody.error.details);
         }
         try {
-            let user = await UserModel.findOne({ email: req.body.email });
+            let user_email = req.body.email.toLowerCase();
+            let user = await UserModel.findOne({ email: user_email });
             if (!user) {
                 return res.status(401).json({ msg: "Password or email is worng ,code:1" })
             }
