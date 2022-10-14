@@ -113,6 +113,7 @@ exports.userCtrl = {
             }
             let user = await UserModel.findOne({_id:idEdit});
             user.password = await bcrypt.hash(user.password, 10);
+            user.email = user.email.toLowerCase();
             await user.save()
             res.status(200).json({ msg: data })
         }
