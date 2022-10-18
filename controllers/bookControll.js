@@ -56,8 +56,8 @@ exports.bookCtrl = {
         let perPage = Math.min(req.query.perPage, 20) || 10;
         let page = req.query.page || 1;
         try {
-            let min = req.query.min;
-            let max = req.query.max;
+            let min = req.query.min || 0;
+            let max = req.query.max || 100000;
             let books = await BookModel.find({ $and: [{ price: { $gte: min } }, { price: { $lte: max } }] })
                 .limit(perPage)
                 .skip((page - 1) * perPage)
