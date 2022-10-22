@@ -6,7 +6,8 @@ The server takes care of encrypting its users password with bcrypt - library to 
 In the project directory, you can run:<br>
 ```npm start``` <br>
 Runs the Express server in development mode.<br>
-By default, the server runs on port 3000 at http://localhost:3000 on your machine, and catches requests that begin<br> with the prefifx of 'api'.
+By default, the server runs on port 3000 at http://localhost:3000 on your machine, and catches requests that begin<br> with the prefifx of 'api'.<br>
+```run and debug``` -  in VSCode use run and debug while standing on js file. work the same 
 # Client
 In the project directory, you can use:<br>
 [postman](https://www.postman.com/) - An application used for API testing.<br>
