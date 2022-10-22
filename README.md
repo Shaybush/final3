@@ -25,4 +25,6 @@ send in the body:<br>
     "password" : "*****"<br>
 }<br>
 2. Than login and take the token to required authentication requests <br>
-send the token in key : x-api-key value : your token
+send the token in key : x-api-key value : your token<br>
+# run public folder
+Api website - [run here](https://ill-plum-barracuda-vest.cyclic.app/)
