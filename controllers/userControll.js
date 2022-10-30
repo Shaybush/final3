@@ -71,7 +71,7 @@ exports.userCtrl = {
                 return res.status(401).json({ msg: "Password or email is worng ,code:2" })
             }
             let newToken = createToken(user._id, user.role);
-            res.json({ token: newToken });
+            res.json({ token: newToken, role : user.role});
         }
         catch (err) {
             console.log(err);
